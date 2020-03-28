@@ -84,5 +84,6 @@ module.exports = {
       path: '/tags/:title',
       component: '~/templates/Tag.vue'
     }],
+
   }
 }

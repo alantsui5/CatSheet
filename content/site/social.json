@@ -1,16 +1,16 @@
 {
   "social": [
     {
-      "icon": "facebook",
-      "link": "https://www.facebook.com"
+      "icon": "github",
+      "link": "https://github.com/alantsui4"
     },
     {
-      "icon": "twitter",
-      "link": "https://twitter.com/"
+      "icon": "gitlab",
+      "link": "https://gitlab.com/alantsui"
     },
     {
       "icon": "linkedin",
-      "link": "https://www.linkedin.com"
+      "link": "https://www.linkedin.com/in/ho-ming-tsui-5009061a3/"
     }
   ]
 }
