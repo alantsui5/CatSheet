@@ -1,49 +1,55 @@
 ---
-title: Suos novi data gente edaci custodia canes
-tags: tag6, tag7, tag8
-category: Digital
-excerpt: Lorem markdownum ipso iam capillis aether ceperat castra ille pectus. Vincere ferociaarva.
+title: C++📦管理器與打📦器（C++ Package Management）
+tags: C++
+category: Programming Language
+excerpt: 讓C++在本地運行與安裝OpenCV
 created: 2019-07-29
 image: ./images/riccardo-chiarini-2VDa8bnLM8c-unsplash.jpg
 image_caption: Photo by Riccardo Chiarini on Unsplash
-author: author2
+author: author1
 ---
 
-## Est terras non
+一個編譯型語言（Java 和JavaScript ES9在我眼中算編譯型啦）都會有一個打包📦器去將C++基準庫和外來庫黏在一起。例如JavaScript有大名鼎鼎的 `Webpack` ， Java 有 `Gradle` 和 `Maven` ,那麼C++ 有什麼呢？最有名的就是 `Cmake`,但我今天想介紹一個更好用的 `Xmake` .而 `JavaScript` 當中有一個非常有名的包管理器 `npm`. 我們今天會用 `Conan`
 
-Lorem markdownum ipso iam capillis aether ceperat castra ille pectus. Iuvenes
-omina credens. Sequuntur ora; facinus me videtur remi sacra et quae.
+## 安裝教學
 
-> Siccata num longo meliore vivat, iussere viscera linguam nil humo nefandis in
-> Venerem sibi. Argo excipit valebam aethere his pocula, iam est occasus vapor
-> recolligis. Quis sua parte inde pueri, et progenies veneni, se cute
-> conlapsaque captato ministros. Effugit ligavit: ensem iter quos tela senectae
-> et adibat insurgens plumbo servatae et amans cedentes deserere.
+[環境配置📦](/blog/c-local-config/)
 
-## Columnae illa eripiam dumque Hylen
+## 介紹
 
-Frenis sua inania parsque emicat, est mare, non paene manibus marmore et omnibus
-motatque contra omnes differtis contra. Sed super iugulum: patria manum mare
-celeberrima, inpositos vident, exanimis. Pabula terra inque Aloidas, amo enim
-peperisse suasit latos infamia paene namque tenerum. Triones et opus. Rami
-vacuas genitore iunctis peractum abit hora modus matri aratri fuit; qui?
+Xmake
 
-> Unus sustinuere Heliadum filia: per vallis mea velle arva non honores. Ictu
-> mens tuae; mea furta, aut vincis aquae respice sano iam hasta. Suos nox
-> ferarumque, harenam simul, gravitate veniente, spatiumque.
+[xmake](https://xmake.io/#/guide/installation)
 
-## Aper pisces venatu
+Conan
 
-Sive gemino tela ferro praebuerat, deserta certe virginitate quoque; est ab mihi
-caput ac? Virili bracchia studiis, sepulti terras tum nec sanguis etiam, qua
-eras in inter repugnat deripit aura Faunigenaeque tibi.
+[conan-io/conan](https://github.com/conan-io/conan)
 
-1. Laborum quo classi
-2. Vix cum vinctum cursuque ardet
-3. Marcida rogumque
-4. Vias dilacerant raptos
-5. Avus voce
-6. Sua quasque moenia a Quodsi tempora tantus
+## 新Project
 
-At momordi non et oculis silva ultor. Flammam es, arma tabe modo et praecipuum
-venti frustraque ambit. Ubique quid dant et Parin adplicor urbes.
+建立一個新Project
+
+    xmake create -l c++ -P <project_name>
+
+文件架構大概是這樣
+
+    porject_1
+    ├── src
+    │   └── main.cpp
+    └── xmake.lua
+
+將你之前在網上打的Code複製進 `main.c`試試吧。然後運行
+
+    xmake run
+
+你的C++ Code還能運行出Android， iOS，Windows，Linux呢
+
+    xmake f -p iphoneos; xmake
+    xmake f -p android --ndk=<你的NDK地址>; xmake
+    xmake f -p linux -a i386
+    xmake f -p linux -a x86_64
+    xmake f -p windows -a x64
+
+### 安裝OpenCV
+
+打開配置文件 `xmake.lua` 並添加OpenCV

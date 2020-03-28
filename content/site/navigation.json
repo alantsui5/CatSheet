@@ -11,15 +11,16 @@
       "external": false
     },
     {
-      "name": "Getting started",
-      "link": "/category/getting-started",
+      "name": "目錄",
+      "link": "/blog/content/",
       "external": false
     }
   ],
-  "footerNavigation": [{
+  "footerNavigation": [
+    {
       "name": "Latest Posts",
       "link": "/",
-      "external" : false
+      "external": false
     },
     {
       "name": "Facebook",

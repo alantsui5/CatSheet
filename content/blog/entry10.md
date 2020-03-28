@@ -1,55 +1,49 @@
 ---
-title: Iter vultus quidem pariter caligine inane hanc
-tags: tag3, tag4, tag5
-category: Business
-excerpt: Canache virago, metuendus illo est sibi inlaesos, ubi prior loca coniuge, illi pro. Vincere ferociaarva.
+title: 本地環境配置（C++ Local Config）
+tags: C++
+category: Programming Languages
+excerpt: C++環境配置
 created: 2019-10-31
 image: ./images/sergio-souza-WU6K3Lmq9ok-unsplash.jpg
 image_caption: Photo by Sergio Souza on Unsplash
-author: author3
+author: author1
 ---
 
-## Unda sit utque siquid
+## Windows 前置配置
 
-Lorem markdownum sacraque mea; virago postquam, feretro cum requiro ipsa
-calidoque consedit. Canache virago, metuendus illo est sibi inlaesos, ubi prior
-loca coniuge, illi pro. Tendat fulgore tantaque cornua venerisque favete,
-ministerio Telamon: ius enim.
+* [安裝WSL連結🔗](/blog/wsl/)
 
-## Litus contigerant lora
+* [安裝VSCode 與配置WSL連結🔗](/blog/visual-studio-code-wsl/)
 
-Concita caeli. Copia domino requirenti poma; tangi dolentibus aevum accipe
-depulerant! Aevum mare, peremit est fasque cognoscet magnum. Parva et illae
-quoque agat custodes, saxa facto proicit auctorem; natam.
+## C++ 安裝
 
-Omen det sequentis deerat, aequor petis novat rector obstitit potuit et nostra
-instabilemque nepotem nectareis leaenae. Nostro quia at confundimur primus:
-timor suum quo premens, se omnibus dum rorantia Lelegas iactatis vultu. Solent
-se eurus; erat herbae sed tanta Somni fortes suffuderat inquit passu Ennomon sed
-pallorque iurat. Aequor accipite socer, urgues sustinuit digitosque infestae
-inmeritam hunc.
+Ubuntu & WSL(Windows)
+```
+    sudo apt-get update 
+    sudo apt install build-essential
+```
+macOS
+```
+    xcode-select --install
+```
+## Xmake
 
-## Exceptas solum vir
+Ubuntu & WSL(Windows)
+1. Download xmake `.deb` install package from **[Releases](https://github.com/xmake-io/xmake/releases)**
+2. Run `dpkg -i xmake-xxxx.deb`
+macOS
+```
+brew install xmake
+```
 
-Omnes silvae pars arbor munus, nam cura Sigei viscera frugum. Tantum Mensis
-insurgens aevum, ut per pisa referens et tota terga et. Quid limosaque regaliter
-deae partes mediam illuc faciem quamquam fronti sanguis parat. Fidis nisi manere
-gratus inter nec corpore cuius petis ipse dedissent tristisque levat, et in
-prior.
 
-1. Haesurum coniugis sunt
-2. Est vocis insidias et vacuas negavit
-3. Orbe et includere saxa
-
-## Lebinthos aestu
-
-Sumus nostro tunc utque robora ignibus ero manum parva venio et. Erat iam sex
-certamen fortibus marisque quoque, unxere quem.
-
-Extenuatur tremens dabat in a altis cervo Alcyone telum Scylla labores vox
-praebere. Ubi gemitus, sub primo tuta sumptumque, ingemuit, nota ire, quo culpae
-cinctaeque, illa fuit. Nostra mihi tempore.
-
-Lacrimis operosa custodemque dextera purpureum, hoc ponitur clavam solida, ad
-non natos corpora nulla, est. Fulvo inania anum suadent solum Oenides manibus
-vulnere bimembres audit per iunctus; quae ingenua prorae generumque!
+## Conan
+Ubuntu & WSL(Windows)
+```
+sudo apt install python3-pip
+pip install conan
+```
+macOS
+```
+brew install conan
+```
