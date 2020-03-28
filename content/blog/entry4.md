@@ -9,8 +9,7 @@ image_caption: Photo by Menghan Zhang on Unsplash
 author: author1
 ---
 
-在 Day 1 - Day 10當中我們會探討下 C++的基本用法，所以大家打開
-
+網上IDE
 [GDB online Debugger | Compiler - Code, Compile, Run, Debug online C, C++](https://www.onlinegdb.com/)
 
 將Language 設定成C++17就可以了！！！
