@@ -52,9 +52,14 @@ module.exports = {
             typeName: 'Category',
             create: true
           }
+        },
+        remark: {
+          plugins: [
+            ['gridsome-plugin-remark-youtube']
+          ]
         }
       }
-    }
+    },
   ],
   transformers: {
     remark: {
