@@ -9,6 +9,9 @@ image_caption: Photo by Josh Spires on Unsplash
 author: author1
 ---
 
+## 比賽連結
+https://ithelp.ithome.com.tw/users/20120557/ironman/2670
+
 ## 動機
 
 因為初期入門前端和後端的時候受過不少IT邦幫忙往期鐵人賽的幫助，因此我也想在第11屆鐵人賽的時候寫一些教學協助其他人接觸新技術。而我選擇C++是因為我當時認為自己Year2的時候在學校學過，而且當時IT幫幫忙沒有一個完整的C++教學，我希望可以貢獻一下。
@@ -52,3 +55,4 @@ C++2020版本即將發佈了，我已經在了解Module，concept，generator等
 ### FFmpeg
 
 希望可以應用smart pointer在FFmpeg當中，並且用C++的新語法進行Syntax簡化等等。當然最希望是可以有和OpenCV的整合
+

@@ -9,6 +9,9 @@ image_caption: Photo by Josh Spires on Unsplash
 author: author1
 ---
 
+## 項目連結
+https://github.com/alantsui5/Shoppy
+
 ## 動機
 
 因為這是學校的項目，所以我想在交付功課的同時為自己建立一個基本的平台（Platform）框架，展望最終能實現登入登出系統，買賣管理，展示頁面，物流系統，郵件驗證系統等等，現在還在完善當中。
@@ -74,3 +77,4 @@ Angular Material不知道為什麼，功能比React Material差很多，難以�
 ### Frontend
 
 我將會加上完整的CRM並加上User Profile，User Setting，Logistic，Checkout page，並且完善購物車
+
