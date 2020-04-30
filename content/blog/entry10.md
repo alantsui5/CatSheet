@@ -19,7 +19,7 @@ author: author1
 
 Ubuntu & WSL(Windows)
 ```
-    sudo apt-get update 
+    sudo apt update 
     sudo apt install build-essential
 ```
 macOS
