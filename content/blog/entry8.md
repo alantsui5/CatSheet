@@ -80,7 +80,7 @@ author: author1
 
 例如 ubuntu 的安裝方式:
 
-    apt-get install [package-name]
+    sudo apt install [package-name]
 
 ### 如何從 Powershell 直接轉換至 WSL 環境
 
