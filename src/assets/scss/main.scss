@@ -186,7 +186,7 @@ body[data-theme="dark"] {
     .author-social {
       a {
         &:hover {
-          @apply text-white
+          @apply text-white;
         }
       }
     }
