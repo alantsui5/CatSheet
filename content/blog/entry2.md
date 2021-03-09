@@ -1,6 +1,6 @@
 ---
 title: React貓紙
-tags: JavaScript, React
+tags: React
 category: Frontend
 excerpt: 歡迎來到React世界
 created: 2020-03-28

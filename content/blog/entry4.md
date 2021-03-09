@@ -1,7 +1,7 @@
 ---
 title: 第一個C++程序（First C++ Program)
 tags: C++
-category: Programming Languages
+category: Backend
 excerpt: 第一個C++程序
 created: 2019-04-01
 image: ./images/menghan-zhang-gnoY8Z0umg4-unsplash.jpg

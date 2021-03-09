@@ -1,7 +1,7 @@
 ---
 title: Visual Studio Code 與WSL強強聯合
-tags: Visual Studio Code, VSCode, IDE, WSL
-category: Configurations
+tags: VSCode
+category: Softwares
 excerpt: 在VSCode 中安裝WSL教學
 created: 2019-09-03
 image: ./images/sergio-souza-mvb51ThjvRA-unsplash.jpg

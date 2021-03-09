@@ -1,6 +1,6 @@
 ---
-title: Shoopy項目自我評價
-tags: Angular, Tailwind, Firebase, Github, PWA, TypeScript
+title: Shoppy項目自我評價
+tags: Angular, Firebase
 category: Portfolio
 excerpt: 介紹與評價自己的Shoppy項目
 created: 2020-03-28

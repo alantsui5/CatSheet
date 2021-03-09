@@ -6,13 +6,8 @@
       "external": false
     },
     {
-      "name": "Resume",
-      "link": "https://alantsui5.github.io/Profolio/",
-      "external": true
-    },
-    {
-      "name": "目錄",
-      "link": "/blog/content/",
+      "name": "Archive",
+      "link": "/Archive",
       "external": false
     },
     {

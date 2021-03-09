@@ -6,12 +6,13 @@
     >
     
     <font-awesome :icon="['fas', 'sun']" class="mr-3" v-if="theme === 'dark'"></font-awesome>
-    <font-awesome :icon="['fas', 'moon']" class="mr-3" v-if="theme === 'light'"></font-awesome>
+    <font-awesome :icon="['fas', 'moon']" class="mr-3" v-if="theme === 'eco'"></font-awesome>
+    <font-awesome :icon="['fas', 'mug-hot']" class="mr-3" v-if="theme === 'light'"></font-awesome>
   </a>
 </template>
 
 <script>
-let themes = ['light', 'dark']
+let themes = ['light', 'eco', 'dark']
 
 export default {
   props: {

@@ -1,7 +1,7 @@
 ---
 title: C++函數式🐱紙(C++ functional Programming)
 tags: C++
-category: Programming Languages
+category: Backend
 excerpt: C++的函數式介紹
 created: 2019-06-28
 image: ./images/qingbao-meng-01_igFr7hd4-unsplash.jpg

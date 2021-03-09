@@ -1,7 +1,7 @@
 ---
 title: WSL貓紙
-tags: Windows, WSL, Windows Sub System Of Linux, Linux
-category: Configurations
+tags: VSCode
+category: Softwares
 excerpt: 在Windows中簡易安裝WSL
 created: 2019-08-02
 image: ./images/sadanand-lowanshi-6AnDyJ10_iQ-unsplash.jpg

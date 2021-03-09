@@ -190,5 +190,17 @@ body[data-theme="dark"] {
         }
       }
     }
+
+    .text-gray-700{
+      color: white;
+    }
   
+}
+
+
+body[data-theme="eco"] {
+  
+  background-color: #f1e7d0;
+  color: #433422;
+
 }

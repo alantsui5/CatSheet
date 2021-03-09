@@ -1,7 +1,7 @@
 ---
 title: C++📦管理器與打📦器（C++ Package Management）
 tags: C++
-category: Programming Language
+category: Backend
 excerpt: 讓C++在本地運行與安裝OpenCV
 created: 2019-07-29
 image: ./images/riccardo-chiarini-2VDa8bnLM8c-unsplash.jpg

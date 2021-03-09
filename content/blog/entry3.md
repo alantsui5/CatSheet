@@ -1,6 +1,6 @@
 ---
 title: 從琅琊榜學 Redux
-tags: React, JavaScript, Redux
+tags: React
 category: Frontend
 excerpt: 從琅琊榜學 Redux
 created: 2019-03-20

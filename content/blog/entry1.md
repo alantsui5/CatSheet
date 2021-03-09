@@ -1,7 +1,7 @@
 ---
 title: JavaScript貓紙
 tags: JavaScript
-category: Programming Languages
+category: Frontend
 excerpt: 本篇將帶你們了解JavaScript的語法部分
 created: 2020-03-28
 image: ./images/josh-spires-dronenr-sQalFlXIsLs-unsplash.jpg

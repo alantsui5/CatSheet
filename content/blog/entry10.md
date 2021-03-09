@@ -1,7 +1,7 @@
 ---
 title: 本地環境配置（C++ Local Config）
 tags: C++
-category: Programming Languages
+category: Backend
 excerpt: C++環境配置
 created: 2019-10-31
 image: ./images/sergio-souza-WU6K3Lmq9ok-unsplash.jpg
