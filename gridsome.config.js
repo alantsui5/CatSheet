@@ -90,6 +90,6 @@ module.exports = {
       component: '~/templates/Tag.vue'
     }],
   },
-  siteUrl: 'https://alantsui4.github.io',
+  siteUrl: 'alantsui5.github.io',
   pathPrefix: '/CatSheet',
 }
