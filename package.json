@@ -19,7 +19,7 @@
     "gridsome-plugin-remark-youtube": "^1.0.1",
     "gridsome-plugin-tailwindcss": "^2.2.41",
     "gridsome-source-static-meta": "github:noxify/gridsome-source-static-meta#master",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "pluralize": "^8.0.0",
     "sass": "^1.32.8",
     "sass-loader": "^8.0.2",
