@@ -4,19 +4,19 @@
         <div class="flex justify-around items-center">
             <h5 >Statistics: </h5>
             <div>
-                Articles {{$page.allBlog.totalCount}}
+                Articles {{$static.allBlog.totalCount}}
             </div>
             <div>
-                Tags {{$page.allTag.totalCount}}
+                Tags {{$static.allTag.totalCount}}
             </div>
             <div>
-                Category {{$page.allCategory.totalCount}}
+                Category {{$static.allCategory.totalCount}}
             </div>
         </div>
         <h5 class="text-center">Categories:</h5>
         <div class="flex justify-around flex-wrap">
         <g-link
-          v-for="edge in $page.allCategory.edges"
+          v-for="edge in $static.allCategory.edges"
           :key="edge.node.id"
           :to="edge.node.path"
           class="text-s bg-transparent hover:text-blue-700 py-2 px-4 mr-3 hover:border-blue-500 border-gray-600 text-gray-700 rounded-lg my-3 border-2"
@@ -25,7 +25,7 @@
         <h5 class="text-center">Tags:</h5>
         <div class="flex justify-evenly flex-wrap">
         <g-link
-          v-for="edge in $page.allTag.edges"
+          v-for="edge in $static.allTag.edges"
           :key="edge.node.id"
           :to="edge.node.path"
           class="text-s bg-transparent hover:text-blue-700 py-2 px-4 mr-4 hover:border-blue-500 border-gray-600 border-2 text-gray-700 rounded-lg my-3"
@@ -35,7 +35,7 @@
     </Layout>
 </template>
 
-<page-query>
+<static-query>
     query{
         allTag{
           totalCount
@@ -68,7 +68,7 @@
         }
       }
      
-</page-query>
+</static-query>
 
 <script>
 export default {

@@ -7,8 +7,8 @@
 module.exports = {
   siteName: '🐱貓紙網',
   siteDescription: '將分享精神傳揚出去',
-  //siteUrl: 'https://alantsui5.github.io',
-  //pathPrefix: '/CatSheet/',
+  //siteUrl: 'https://alantsui5.github.io/CatSheet',
+  //pathPrefix: '/CatSheet',
   plugins: [
     {
       use: 'gridsome-plugin-tailwindcss',
