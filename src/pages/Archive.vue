@@ -1,6 +1,4 @@
 <template>
-    
-    
     <Layout>
        <div class="container mx-auto w-10/12">
         <div class="flex justify-around items-center">
@@ -34,15 +32,6 @@
         >{{ edge.node.title }} {{edge.node.belongsTo.totalCount}} </g-link>
           </div>
       </div>
-        <!--
-        <g-link
-            v-for="tag in $page.allTag.edges"
-            :key="tag.id"
-            :to="tag.path"
-            class="text-xs bg-transparent hover:text-blue-700 py-2 px-4 mr-2 border hover:border-blue-500 border-gray-600 text-gray-700 rounded-full"
-          >{{ tag.title }} {{tag.id}} </g-link>
-          -->
-        
     </Layout>
 </template>
 

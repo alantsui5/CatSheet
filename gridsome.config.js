@@ -7,7 +7,8 @@
 module.exports = {
   siteName: '🐱貓紙網',
   siteDescription: '將分享精神傳揚出去',
-  siteUrl: 'http://localhost:8080',
+  //siteUrl: 'https://alantsui5.github.io',
+  //pathPrefix: '/CatSheet/',
   plugins: [
     {
       use: 'gridsome-plugin-tailwindcss',
@@ -88,8 +89,6 @@ module.exports = {
     Tag: [{
       path: '/tags/:title',
       component: '~/templates/Tag.vue'
-    }],
-  },
-  siteUrl: 'alantsui5.github.io',
-  pathPrefix: '/CatSheet',
+    }]
+  }
 }
