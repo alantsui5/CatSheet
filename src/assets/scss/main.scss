@@ -78,7 +78,7 @@ ul {
   border-width: 0px !important;
 }
 
-.flex-post {
+.flex-post{
   @apply border-b;
   @apply border-b-gray-300;
   @apply flex-col;
@@ -106,6 +106,7 @@ ul {
 .author-list-item:nth-child(n+2) {
   @apply -ml-3
 }
+
 
 @media (min-width: 768px) {
   .with-large>.flex-post:nth-child(6n+1) {
