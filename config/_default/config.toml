@@ -1,5 +1,5 @@
 # Change baseurl before deploy
-baseurl = "cat-sheet.netlify.app/"
+baseurl = "https://cat-sheet.netlify.app/"
 languageCode = "en-us"
 paginate = 10
 title = "Cat Sheet"
