@@ -7,7 +7,5 @@ image:
 categories:
     - JavaScript
 tags:
-    - frontend
-    - support
-    - backend
+    - How to install
 ---
