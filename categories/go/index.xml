@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Go on Cat Sheet</title><link>https://cat-sheet.netlify.app/categories/go/</link><description>Recent content in Go on Cat Sheet</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 13 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://cat-sheet.netlify.app/categories/go/index.xml" rel="self" type="application/rss+xml"/><item><title>❓How to install Hugo</title><link>https://cat-sheet.netlify.app/p/install-hugo/</link><pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate><guid>https://cat-sheet.netlify.app/p/install-hugo/</guid><description>&lt;p>[[How to install]] [[Go]] [[Hugo]]&lt;/p>
+&lt;h3 id="how-to-install-hugo-in-ubuntu-or-debian-depreciated">❓How to install Hugo in Ubuntu or Debian? {depreciated}&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">sudo apt install hugo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt install golang
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="how-to-install-hugo-in-fedora-or-rhel8-or-above">❓How to install Hugo in Fedora or RHEL8 or above?&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">sudo dnf install hugo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo dnf install golang
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="how-to-install-hugo-in-macos">❓How to install Hugo in macOS?&lt;/h3>
+&lt;p>Firstly, install homebrew package manager:
+![[How to install package manager#^75b4df]]
+Then:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">brew install hugo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">brew install golang
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="how-to-install-hugo-in-windows">❓How to install Hugo in Windows?&lt;/h3>
+&lt;p>Firstly, install scoop package manager if not existing:
+![[How to install package manager#^75b4df]]
+Then:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="n">scoop&lt;/span> &lt;span class="n">install&lt;/span> &lt;span class="nb">hugo-extended&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">scoop&lt;/span> &lt;span class="n">install&lt;/span> &lt;span class="n">go&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

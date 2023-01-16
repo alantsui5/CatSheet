@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cat Sheet</title><link>https://cat-sheet.netlify.app/</link><description>Recent content on Cat Sheet</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 14 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://cat-sheet.netlify.app/index.xml" rel="self" type="application/rss+xml"/><item><title>❓What is JavaScript?</title><link>https://cat-sheet.netlify.app/p/what-is-javascript/</link><pubDate>Wed, 14 Dec 2022 00:00:00 +0000</pubDate><guid>https://cat-sheet.netlify.app/p/what-is-javascript/</guid><description>&lt;h2 id="-what-is-javascript">❓ What is JavaScript？&lt;/h2>
+&lt;p>✅ JavaScript is a client-side scripting language. This language can update HTML and CSS and can be run on the browser. JavaScript can &lt;strong>calculate, manipulate and validate data.&lt;/strong>&lt;/p>
+&lt;h2 id="-how-to-install-javascript">❓ How to install JavaScript？&lt;/h2>
+&lt;p>✅ Please reference &lt;a class="link" href="https://cat-sheet.netlify.app/p/install-nodejs" >How to install NodeJS 18&lt;/a>.&lt;/p>
+&lt;h2 id="-what-is-the-language-characteristics-of-javascript">❓ What is the language characteristics of JavaScript?&lt;/h2>
+&lt;p>✅ A language of High-Level, single-threaded, garbage-collected, interpreted(or just-in-time compiled), prototype-based, multi-paradigm, dynamic language with a non-blocking event loop&lt;/p>
+&lt;h3 id="-what-is-mean-by-high-level">❓ What is mean by &lt;strong>High Level&lt;/strong>?&lt;/h3>
+&lt;p>✅ High-Level refers to the abstraction the language provides over the machine’s bare-metal hardware. JavaScript is considered high-level because it does not require direct interaction with the operating system, hardware. In addition, it does not require memory-management like C/C++ because the runtime always uses garbage-collection.&lt;/p>
+&lt;h3 id="-what-is-mean-by-multi-paradigm">❓ What is mean by &lt;strong>Multi-Paradigm&lt;/strong>?&lt;/h3>
+&lt;p>✅ &lt;strong>Multi-Paradigm&lt;/strong> means the language is general-purpose or flexible. JS can be used for declarative (functional) or imperative (object-oriented) programming styles.&lt;/p>
+&lt;h3 id="-is-javascript__interpreted__or__just-in-timecompiled__">❓ Is JavaScript &lt;strong>Interpreted&lt;/strong> or &lt;strong>Just-In-Time Compiled&lt;/strong>?&lt;/h3>
+&lt;p>✅ &lt;strong>Interpreted&lt;/strong> means the source code is converted to &lt;strong>&lt;a class="link" href="https://en.wikipedia.org/wiki/Bytecode" target="_blank" rel="noopener"
+>bytecode&lt;/a>&lt;/strong> and executed at runtime (as opposed to being compiled to a machine code binary at build time). This is also why JS is commonly called a “scripting language”.&lt;/p>
+&lt;blockquote>
+&lt;p>It was only interpreted, but modern JS engines like V8, Spidermonkey, and Nitro use various techniques to perform &lt;em>Just-in-Time Compilation&lt;/em> or JIT for better performance. Developers still use JS like an interpreted language, while the engine magically compiles parts of source code to low-level machine code behind the scenes.&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="-what-is-mean-by-__prototype-based__">❓ What is mean by &lt;strong>prototype-based&lt;/strong>?&lt;/h3>
+&lt;p>✅ Prototypal Inheritance means that objects can inherit behaviours from other objects.
+This differs from classical inheritance where you define a &lt;strong>&lt;code>class&lt;/code>&lt;/strong> or blueprint for each object and instantiate it.&lt;/p>
+&lt;h3 id="-why-js-is-a-single-threaded">❓ Why JS is a &lt;strong>Single-Threaded&lt;/strong>?&lt;/h3>
+&lt;p>✅ &lt;strong>Single-Threaded&lt;/strong> means that JS can only run one instruction at a time, even if your CPU has multiple cores and available threads.&lt;/p>
+&lt;h2 id="-how-does-javascript-handle-jobs-at-the-same-time-concurrently">❓ How does JavaScript &lt;strong>handle jobs at the same time concurrently&lt;/strong>?&lt;/h2>
+&lt;p>✅ &lt;strong>Event Loop&lt;/strong> refers to a feature implemented by engines like V8 that allow JS to offload tasks to separate threads.&lt;/p>
+&lt;ol>
+&lt;li>Browser and Node APIs execute long-running tasks separately from the the main JS thread&lt;/li>
+&lt;li>Then enqueue a &lt;strong>&lt;code>callback&lt;/code>&lt;/strong> function (which you define) to run on the main thread when the task is complete.&lt;/li>
+&lt;li>This is why JS is called &lt;em>&lt;strong>non-blocking&lt;/strong>&lt;/em> because it should only ever wait for synchronous code from your JS functions.&lt;/li>
+&lt;li>Think of the &lt;strong>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop" target="_blank" rel="noopener"
+>Event Loop&lt;/a>&lt;/strong> as message queue between the single JS thread and the OS.&lt;/li>
+&lt;/ol>
+&lt;h3 id="blocking-event-loop-example">Blocking Event Loop Example&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// L1
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;🥪 Synchronous 1&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// L2
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">_&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`🍅 Timeout 2`&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// L3
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nb">Promise&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">resolve&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">_&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;🍍 Promise 3&amp;#39;&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// L4
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;🥪 Synchronous 4&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Output
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 🥪 Synchronous 1
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 🥪 Synchronous 4
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 🍍 Promise 3
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 🍅 Timeout 2
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>Explanation:&lt;/strong> It will add &lt;strong>Sync&lt;/strong>, &lt;strong>Promise&lt;/strong>, &lt;strong>Timeout&lt;/strong> Code to the event queue, and then check or pop the task with task priority:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>1. Sync Task&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>2. Promise(Microtask)&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>3. Timeout(Macrotask)&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>‼Particularly:&lt;/strong> If the microtask can not be done in a event loop, it will switch order with macro task.&lt;/p>
+&lt;h3 id="another-blocking-event-loop-example">Another Blocking Event Loop Example&lt;/h3>
+&lt;p>&lt;code>Promise.resolve(result)&lt;/code> without wrapping the task is still blocking&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-jsx" data-lang="jsx">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Pre-defined slow task
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">codeBlocker&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">let&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">1000000000&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">resolve&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;🐷 billion loops done&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// L1
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;🥪 Synchronous 1&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// L2
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">codeBlocker&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// L3
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;🥪 Synchronous 2&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Output
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 🥪 Synchronous 1 &amp;lt;0ms&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 🥪 Synchronous 2 &amp;lt;730ms&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 🐷 billion loops done &amp;lt;731ms&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>Explanation:&lt;/strong>: The only line in the above code treated as micro task is resolve&lt;code>('🐷 billion loops done')&lt;/code>, not the time consuming task.&lt;/p>
+&lt;h3 id="promiseresolvethenresult-and-task-is-non-blocking-finally">Promise.resolve().then(result and task) is non-blocking finally&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-jsx" data-lang="jsx">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Pre-defined slow task
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">codeBlocker&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">resolve&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">v&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">let&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">1000000000&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;🐷 billion loops done&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// L1
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;🥪 Synchronous 1&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// L2
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">codeBlocker&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// L3
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;🥪 Synchronous 2&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Output
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 🥪 Synchronous 1 &amp;lt;0ms&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 🥪 Synchronous 2 &amp;lt;4ms&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 🐷 billion loops done &amp;lt;731ms&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="references">References&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://fireship.io/courses/javascript/intro-how-js-works/" target="_blank" rel="noopener"
+>How JavaScript Works&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.w3schools.com/whatis/whatis_js.asp" target="_blank" rel="noopener"
+>What is JavaScript&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>How to install Mingw in Windows?</title><link>https://cat-sheet.netlify.app/p/mingw/</link><pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate><guid>https://cat-sheet.netlify.app/p/mingw/</guid><description>&lt;p>[[C++]] [[How to install]]&lt;/p>
+&lt;h2 id="installation-guide">Installation Guide&lt;/h2>
+&lt;p>If scoop is not installed: please execute this command
+![[How to install package manager#^75b4df]]
+Then you can install Mingw&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">scoop install mingw
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>❓How to install Hugo</title><link>https://cat-sheet.netlify.app/p/install-hugo/</link><pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate><guid>https://cat-sheet.netlify.app/p/install-hugo/</guid><description>&lt;p>[[How to install]] [[Go]] [[Hugo]]&lt;/p>
+&lt;h3 id="how-to-install-hugo-in-ubuntu-or-debian-depreciated">❓How to install Hugo in Ubuntu or Debian? {depreciated}&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">sudo apt install hugo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt install golang
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="how-to-install-hugo-in-fedora-or-rhel8-or-above">❓How to install Hugo in Fedora or RHEL8 or above?&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">sudo dnf install hugo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo dnf install golang
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="how-to-install-hugo-in-macos">❓How to install Hugo in macOS?&lt;/h3>
+&lt;p>Firstly, install homebrew package manager:
+![[How to install package manager#^75b4df]]
+Then:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">brew install hugo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">brew install golang
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="how-to-install-hugo-in-windows">❓How to install Hugo in Windows?&lt;/h3>
+&lt;p>Firstly, install scoop package manager if not existing:
+![[How to install package manager#^75b4df]]
+Then:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="n">scoop&lt;/span> &lt;span class="n">install&lt;/span> &lt;span class="nb">hugo-extended&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">scoop&lt;/span> &lt;span class="n">install&lt;/span> &lt;span class="n">go&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>❓How to install nodeJS 18?</title><link>https://cat-sheet.netlify.app/p/install-nodejs/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://cat-sheet.netlify.app/p/install-nodejs/</guid><description/></item><item><title>Archives</title><link>https://cat-sheet.netlify.app/archives/</link><pubDate>Sat, 06 Feb 2021 00:00:00 +0000</pubDate><guid>https://cat-sheet.netlify.app/archives/</guid><description/></item><item><title/><link>https://cat-sheet.netlify.app/p/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cat-sheet.netlify.app/p/</guid><description>&lt;p>Please visit Go by Example to understand basic golang syntax
+&lt;a class="link" href="https://gobyexample.com/" target="_blank" rel="noopener"
+>https://gobyexample.com/&lt;/a>&lt;/p>
+&lt;p>Syntax Reference Guide&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/hello-world" target="_blank" rel="noopener"
+>Hello World&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/values" target="_blank" rel="noopener"
+>Values&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/variables" target="_blank" rel="noopener"
+>Variables&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/constants" target="_blank" rel="noopener"
+>Constants&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/for" target="_blank" rel="noopener"
+>For&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/if-else" target="_blank" rel="noopener"
+>If/Else&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/switch" target="_blank" rel="noopener"
+>Switch&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/arrays" target="_blank" rel="noopener"
+>Arrays&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/slices" target="_blank" rel="noopener"
+>Slices&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/maps" target="_blank" rel="noopener"
+>Maps&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/range" target="_blank" rel="noopener"
+>Range&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/functions" target="_blank" rel="noopener"
+>Functions&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/multiple-return-values" target="_blank" rel="noopener"
+>Multiple Return Values&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/variadic-functions" target="_blank" rel="noopener"
+>Variadic Functions&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/closures" target="_blank" rel="noopener"
+>Closures&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/recursion" target="_blank" rel="noopener"
+>Recursion&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/pointers" target="_blank" rel="noopener"
+>Pointers&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/strings-and-runes" target="_blank" rel="noopener"
+>Strings and Runes&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/structs" target="_blank" rel="noopener"
+>Structs&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/methods" target="_blank" rel="noopener"
+>Methods&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/interfaces" target="_blank" rel="noopener"
+>Interfaces&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/struct-embedding" target="_blank" rel="noopener"
+>Struct Embedding&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/generics" target="_blank" rel="noopener"
+>Generics&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/errors" target="_blank" rel="noopener"
+>Errors&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/goroutines" target="_blank" rel="noopener"
+>Goroutines&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/channels" target="_blank" rel="noopener"
+>Channels&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/channel-buffering" target="_blank" rel="noopener"
+>Channel Buffering&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/channel-synchronization" target="_blank" rel="noopener"
+>Channel Synchronization&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/channel-directions" target="_blank" rel="noopener"
+>Channel Directions&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/select" target="_blank" rel="noopener"
+>Select&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/timeouts" target="_blank" rel="noopener"
+>Timeouts&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/non-blocking-channel-operations" target="_blank" rel="noopener"
+>Non-Blocking Channel Operations&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/closing-channels" target="_blank" rel="noopener"
+>Closing Channels&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/range-over-channels" target="_blank" rel="noopener"
+>Range over Channels&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/timers" target="_blank" rel="noopener"
+>Timers&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/tickers" target="_blank" rel="noopener"
+>Tickers&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/worker-pools" target="_blank" rel="noopener"
+>Worker Pools&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/waitgroups" target="_blank" rel="noopener"
+>WaitGroups&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/rate-limiting" target="_blank" rel="noopener"
+>Rate Limiting&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/atomic-counters" target="_blank" rel="noopener"
+>Atomic Counters&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/mutexes" target="_blank" rel="noopener"
+>Mutexes&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/stateful-goroutines" target="_blank" rel="noopener"
+>Stateful Goroutines&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/sorting" target="_blank" rel="noopener"
+>Sorting&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/sorting-by-functions" target="_blank" rel="noopener"
+>Sorting by Functions&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/panic" target="_blank" rel="noopener"
+>Panic&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/defer" target="_blank" rel="noopener"
+>Defer&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/recover" target="_blank" rel="noopener"
+>Recover&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/string-functions" target="_blank" rel="noopener"
+>String Functions&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/string-formatting" target="_blank" rel="noopener"
+>String Formatting&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/text-templates" target="_blank" rel="noopener"
+>Text Templates&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/regular-expressions" target="_blank" rel="noopener"
+>Regular Expressions&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/json" target="_blank" rel="noopener"
+>JSON&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/xml" target="_blank" rel="noopener"
+>XML&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/time" target="_blank" rel="noopener"
+>Time&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/epoch" target="_blank" rel="noopener"
+>Epoch&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/time-formatting-parsing" target="_blank" rel="noopener"
+>Time Formatting / Parsing&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/random-numbers" target="_blank" rel="noopener"
+>Random Numbers&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/number-parsing" target="_blank" rel="noopener"
+>Number Parsing&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/url-parsing" target="_blank" rel="noopener"
+>URL Parsing&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/sha256-hashes" target="_blank" rel="noopener"
+>SHA256 Hashes&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/base64-encoding" target="_blank" rel="noopener"
+>Base64 Encoding&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/reading-files" target="_blank" rel="noopener"
+>Reading Files&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/writing-files" target="_blank" rel="noopener"
+>Writing Files&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/line-filters" target="_blank" rel="noopener"
+>Line Filters&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/file-paths" target="_blank" rel="noopener"
+>File Paths&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/directories" target="_blank" rel="noopener"
+>Directories&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/temporary-files-and-directories" target="_blank" rel="noopener"
+>Temporary Files and Directories&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/embed-directive" target="_blank" rel="noopener"
+>Embed Directive&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/testing-and-benchmarking" target="_blank" rel="noopener"
+>Testing and Benchmarking&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/command-line-arguments" target="_blank" rel="noopener"
+>Command-Line Arguments&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/command-line-flags" target="_blank" rel="noopener"
+>Command-Line Flags&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/command-line-subcommands" target="_blank" rel="noopener"
+>Command-Line Subcommands&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/environment-variables" target="_blank" rel="noopener"
+>Environment Variables&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/http-client" target="_blank" rel="noopener"
+>HTTP Client&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/http-server" target="_blank" rel="noopener"
+>HTTP Server&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/context" target="_blank" rel="noopener"
+>Context&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/spawning-processes" target="_blank" rel="noopener"
+>Spawning Processes&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/execing-processes" target="_blank" rel="noopener"
+>Exec&amp;rsquo;ing Processes&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/signals" target="_blank" rel="noopener"
+>Signals&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gobyexample.com/exit" target="_blank" rel="noopener"
+>Exit&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Links</title><link>https://cat-sheet.netlify.app/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cat-sheet.netlify.app/links/</guid><description>&lt;p>To use this feature, add &lt;code>links&lt;/code> section to frontmatter.&lt;/p>
+&lt;p>This page&amp;rsquo;s frontmatter:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">links&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">GitHub&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">GitHub is the world&amp;#39;s largest software development platform.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">website&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://github.com&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">TypeScript&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">website&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://www.typescriptlang.org&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ts-logo-128.jpg&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>image&lt;/code> field accepts both local and external images.&lt;/p></description></item><item><title>Search</title><link>https://cat-sheet.netlify.app/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cat-sheet.netlify.app/search/</guid><description/></item></channel></rss>
