@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Please visit Go by Example to understand basic golang syntax https://gobyexample.com/
+Syntax Reference Guide
+Hello World Values Variables Constants For If/Else Switch Arrays Slices Maps Range Functions Multiple Return Values Variadic Functions Closures Recursion Pointers Strings and Runes Structs Methods Interfaces Struct Embedding Generics Errors Goroutines Channels Channel Buffering Channel Synchronization Channel Directions Select Timeouts Non-Blocking Channel Operations Closing Channels Range over Channels Timers Tickers Worker Pools WaitGroups Rate Limiting Atomic Counters Mutexes Stateful Goroutines Sorting Sorting by Functions Panic Defer Recover String Functions String Formatting Text Templates Regular Expressions JSON XML Time Epoch Time Formatting / Parsing Random Numbers Number Parsing URL Parsing SHA256 Hashes Base64 Encoding Reading Files Writing Files Line Filters File Paths Directories Temporary Files and Directories Embed Directive Testing and Benchmarking Command-Line Arguments Command-Line Flags Command-Line Subcommands Environment Variables HTTP Client HTTP Server Context Spawning Processes Exec&amp;rsquo;ing Processes Signals Exit '>
+<title></title>
+
+<link rel='canonical' href='https://cat-sheet.netlify.app/p/'>
+
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content=''>
+<meta property='og:description' content='Please visit Go by Example to understand basic golang syntax https://gobyexample.com/
+Syntax Reference Guide
+Hello World Values Variables Constants For If/Else Switch Arrays Slices Maps Range Functions Multiple Return Values Variadic Functions Closures Recursion Pointers Strings and Runes Structs Methods Interfaces Struct Embedding Generics Errors Goroutines Channels Channel Buffering Channel Synchronization Channel Directions Select Timeouts Non-Blocking Channel Operations Closing Channels Range over Channels Timers Tickers Worker Pools WaitGroups Rate Limiting Atomic Counters Mutexes Stateful Goroutines Sorting Sorting by Functions Panic Defer Recover String Functions String Formatting Text Templates Regular Expressions JSON XML Time Epoch Time Formatting / Parsing Random Numbers Number Parsing URL Parsing SHA256 Hashes Base64 Encoding Reading Files Writing Files Line Filters File Paths Directories Temporary Files and Directories Embed Directive Testing and Benchmarking Command-Line Arguments Command-Line Flags Command-Line Subcommands Environment Variables HTTP Client HTTP Server Context Spawning Processes Exec&amp;rsquo;ing Processes Signals Exit '>
+<meta property='og:url' content='https://cat-sheet.netlify.app/p/'>
+<meta property='og:site_name' content='Cat Sheet'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' />
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="Please visit Go by Example to understand basic golang syntax https://gobyexample.com/
+Syntax Reference Guide
+Hello World Values Variables Constants For If/Else Switch Arrays Slices Maps Range Functions Multiple Return Values Variadic Functions Closures Recursion Pointers Strings and Runes Structs Methods Interfaces Struct Embedding Generics Errors Goroutines Channels Channel Buffering Channel Synchronization Channel Directions Select Timeouts Non-Blocking Channel Operations Closing Channels Range over Channels Timers Tickers Worker Pools WaitGroups Rate Limiting Atomic Counters Mutexes Stateful Goroutines Sorting Sorting by Functions Panic Defer Recover String Functions String Formatting Text Templates Regular Expressions JSON XML Time Epoch Time Formatting / Parsing Random Numbers Number Parsing URL Parsing SHA256 Hashes Base64 Encoding Reading Files Writing Files Line Filters File Paths Directories Temporary Files and Directories Embed Directive Testing and Benchmarking Command-Line Arguments Command-Line Flags Command-Line Subcommands Environment Variables HTTP Client HTTP Server Context Spawning Processes Exec&amp;rsquo;ing Processes Signals Exit ">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🐱</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Cat Sheet</a></h1>
+            <h2 class="site-description">Fast Paced Blog within 5 minutes</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/alantsui5/CatSheet'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/"></a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>Please visit Go by Example to understand basic golang syntax
+<a class="link" href="https://gobyexample.com/"  target="_blank" rel="noopener"
+    >https://gobyexample.com/</a></p>
+<p>Syntax Reference Guide</p>
+<ul>
+<li><a class="link" href="https://gobyexample.com/hello-world"  target="_blank" rel="noopener"
+    >Hello World</a></li>
+<li><a class="link" href="https://gobyexample.com/values"  target="_blank" rel="noopener"
+    >Values</a></li>
+<li><a class="link" href="https://gobyexample.com/variables"  target="_blank" rel="noopener"
+    >Variables</a></li>
+<li><a class="link" href="https://gobyexample.com/constants"  target="_blank" rel="noopener"
+    >Constants</a></li>
+<li><a class="link" href="https://gobyexample.com/for"  target="_blank" rel="noopener"
+    >For</a></li>
+<li><a class="link" href="https://gobyexample.com/if-else"  target="_blank" rel="noopener"
+    >If/Else</a></li>
+<li><a class="link" href="https://gobyexample.com/switch"  target="_blank" rel="noopener"
+    >Switch</a></li>
+<li><a class="link" href="https://gobyexample.com/arrays"  target="_blank" rel="noopener"
+    >Arrays</a></li>
+<li><a class="link" href="https://gobyexample.com/slices"  target="_blank" rel="noopener"
+    >Slices</a></li>
+<li><a class="link" href="https://gobyexample.com/maps"  target="_blank" rel="noopener"
+    >Maps</a></li>
+<li><a class="link" href="https://gobyexample.com/range"  target="_blank" rel="noopener"
+    >Range</a></li>
+<li><a class="link" href="https://gobyexample.com/functions"  target="_blank" rel="noopener"
+    >Functions</a></li>
+<li><a class="link" href="https://gobyexample.com/multiple-return-values"  target="_blank" rel="noopener"
+    >Multiple Return Values</a></li>
+<li><a class="link" href="https://gobyexample.com/variadic-functions"  target="_blank" rel="noopener"
+    >Variadic Functions</a></li>
+<li><a class="link" href="https://gobyexample.com/closures"  target="_blank" rel="noopener"
+    >Closures</a></li>
+<li><a class="link" href="https://gobyexample.com/recursion"  target="_blank" rel="noopener"
+    >Recursion</a></li>
+<li><a class="link" href="https://gobyexample.com/pointers"  target="_blank" rel="noopener"
+    >Pointers</a></li>
+<li><a class="link" href="https://gobyexample.com/strings-and-runes"  target="_blank" rel="noopener"
+    >Strings and Runes</a></li>
+<li><a class="link" href="https://gobyexample.com/structs"  target="_blank" rel="noopener"
+    >Structs</a></li>
+<li><a class="link" href="https://gobyexample.com/methods"  target="_blank" rel="noopener"
+    >Methods</a></li>
+<li><a class="link" href="https://gobyexample.com/interfaces"  target="_blank" rel="noopener"
+    >Interfaces</a></li>
+<li><a class="link" href="https://gobyexample.com/struct-embedding"  target="_blank" rel="noopener"
+    >Struct Embedding</a></li>
+<li><a class="link" href="https://gobyexample.com/generics"  target="_blank" rel="noopener"
+    >Generics</a></li>
+<li><a class="link" href="https://gobyexample.com/errors"  target="_blank" rel="noopener"
+    >Errors</a></li>
+<li><a class="link" href="https://gobyexample.com/goroutines"  target="_blank" rel="noopener"
+    >Goroutines</a></li>
+<li><a class="link" href="https://gobyexample.com/channels"  target="_blank" rel="noopener"
+    >Channels</a></li>
+<li><a class="link" href="https://gobyexample.com/channel-buffering"  target="_blank" rel="noopener"
+    >Channel Buffering</a></li>
+<li><a class="link" href="https://gobyexample.com/channel-synchronization"  target="_blank" rel="noopener"
+    >Channel Synchronization</a></li>
+<li><a class="link" href="https://gobyexample.com/channel-directions"  target="_blank" rel="noopener"
+    >Channel Directions</a></li>
+<li><a class="link" href="https://gobyexample.com/select"  target="_blank" rel="noopener"
+    >Select</a></li>
+<li><a class="link" href="https://gobyexample.com/timeouts"  target="_blank" rel="noopener"
+    >Timeouts</a></li>
+<li><a class="link" href="https://gobyexample.com/non-blocking-channel-operations"  target="_blank" rel="noopener"
+    >Non-Blocking Channel Operations</a></li>
+<li><a class="link" href="https://gobyexample.com/closing-channels"  target="_blank" rel="noopener"
+    >Closing Channels</a></li>
+<li><a class="link" href="https://gobyexample.com/range-over-channels"  target="_blank" rel="noopener"
+    >Range over Channels</a></li>
+<li><a class="link" href="https://gobyexample.com/timers"  target="_blank" rel="noopener"
+    >Timers</a></li>
+<li><a class="link" href="https://gobyexample.com/tickers"  target="_blank" rel="noopener"
+    >Tickers</a></li>
+<li><a class="link" href="https://gobyexample.com/worker-pools"  target="_blank" rel="noopener"
+    >Worker Pools</a></li>
+<li><a class="link" href="https://gobyexample.com/waitgroups"  target="_blank" rel="noopener"
+    >WaitGroups</a></li>
+<li><a class="link" href="https://gobyexample.com/rate-limiting"  target="_blank" rel="noopener"
+    >Rate Limiting</a></li>
+<li><a class="link" href="https://gobyexample.com/atomic-counters"  target="_blank" rel="noopener"
+    >Atomic Counters</a></li>
+<li><a class="link" href="https://gobyexample.com/mutexes"  target="_blank" rel="noopener"
+    >Mutexes</a></li>
+<li><a class="link" href="https://gobyexample.com/stateful-goroutines"  target="_blank" rel="noopener"
+    >Stateful Goroutines</a></li>
+<li><a class="link" href="https://gobyexample.com/sorting"  target="_blank" rel="noopener"
+    >Sorting</a></li>
+<li><a class="link" href="https://gobyexample.com/sorting-by-functions"  target="_blank" rel="noopener"
+    >Sorting by Functions</a></li>
+<li><a class="link" href="https://gobyexample.com/panic"  target="_blank" rel="noopener"
+    >Panic</a></li>
+<li><a class="link" href="https://gobyexample.com/defer"  target="_blank" rel="noopener"
+    >Defer</a></li>
+<li><a class="link" href="https://gobyexample.com/recover"  target="_blank" rel="noopener"
+    >Recover</a></li>
+<li><a class="link" href="https://gobyexample.com/string-functions"  target="_blank" rel="noopener"
+    >String Functions</a></li>
+<li><a class="link" href="https://gobyexample.com/string-formatting"  target="_blank" rel="noopener"
+    >String Formatting</a></li>
+<li><a class="link" href="https://gobyexample.com/text-templates"  target="_blank" rel="noopener"
+    >Text Templates</a></li>
+<li><a class="link" href="https://gobyexample.com/regular-expressions"  target="_blank" rel="noopener"
+    >Regular Expressions</a></li>
+<li><a class="link" href="https://gobyexample.com/json"  target="_blank" rel="noopener"
+    >JSON</a></li>
+<li><a class="link" href="https://gobyexample.com/xml"  target="_blank" rel="noopener"
+    >XML</a></li>
+<li><a class="link" href="https://gobyexample.com/time"  target="_blank" rel="noopener"
+    >Time</a></li>
+<li><a class="link" href="https://gobyexample.com/epoch"  target="_blank" rel="noopener"
+    >Epoch</a></li>
+<li><a class="link" href="https://gobyexample.com/time-formatting-parsing"  target="_blank" rel="noopener"
+    >Time Formatting / Parsing</a></li>
+<li><a class="link" href="https://gobyexample.com/random-numbers"  target="_blank" rel="noopener"
+    >Random Numbers</a></li>
+<li><a class="link" href="https://gobyexample.com/number-parsing"  target="_blank" rel="noopener"
+    >Number Parsing</a></li>
+<li><a class="link" href="https://gobyexample.com/url-parsing"  target="_blank" rel="noopener"
+    >URL Parsing</a></li>
+<li><a class="link" href="https://gobyexample.com/sha256-hashes"  target="_blank" rel="noopener"
+    >SHA256 Hashes</a></li>
+<li><a class="link" href="https://gobyexample.com/base64-encoding"  target="_blank" rel="noopener"
+    >Base64 Encoding</a></li>
+<li><a class="link" href="https://gobyexample.com/reading-files"  target="_blank" rel="noopener"
+    >Reading Files</a></li>
+<li><a class="link" href="https://gobyexample.com/writing-files"  target="_blank" rel="noopener"
+    >Writing Files</a></li>
+<li><a class="link" href="https://gobyexample.com/line-filters"  target="_blank" rel="noopener"
+    >Line Filters</a></li>
+<li><a class="link" href="https://gobyexample.com/file-paths"  target="_blank" rel="noopener"
+    >File Paths</a></li>
+<li><a class="link" href="https://gobyexample.com/directories"  target="_blank" rel="noopener"
+    >Directories</a></li>
+<li><a class="link" href="https://gobyexample.com/temporary-files-and-directories"  target="_blank" rel="noopener"
+    >Temporary Files and Directories</a></li>
+<li><a class="link" href="https://gobyexample.com/embed-directive"  target="_blank" rel="noopener"
+    >Embed Directive</a></li>
+<li><a class="link" href="https://gobyexample.com/testing-and-benchmarking"  target="_blank" rel="noopener"
+    >Testing and Benchmarking</a></li>
+<li><a class="link" href="https://gobyexample.com/command-line-arguments"  target="_blank" rel="noopener"
+    >Command-Line Arguments</a></li>
+<li><a class="link" href="https://gobyexample.com/command-line-flags"  target="_blank" rel="noopener"
+    >Command-Line Flags</a></li>
+<li><a class="link" href="https://gobyexample.com/command-line-subcommands"  target="_blank" rel="noopener"
+    >Command-Line Subcommands</a></li>
+<li><a class="link" href="https://gobyexample.com/environment-variables"  target="_blank" rel="noopener"
+    >Environment Variables</a></li>
+<li><a class="link" href="https://gobyexample.com/http-client"  target="_blank" rel="noopener"
+    >HTTP Client</a></li>
+<li><a class="link" href="https://gobyexample.com/http-server"  target="_blank" rel="noopener"
+    >HTTP Server</a></li>
+<li><a class="link" href="https://gobyexample.com/context"  target="_blank" rel="noopener"
+    >Context</a></li>
+<li><a class="link" href="https://gobyexample.com/spawning-processes"  target="_blank" rel="noopener"
+    >Spawning Processes</a></li>
+<li><a class="link" href="https://gobyexample.com/execing-processes"  target="_blank" rel="noopener"
+    >Exec&rsquo;ing Processes</a></li>
+<li><a class="link" href="https://gobyexample.com/signals"  target="_blank" rel="noopener"
+    >Signals</a></li>
+<li><a class="link" href="https://gobyexample.com/exit"  target="_blank" rel="noopener"
+    >Exit</a></li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "catsheet admin" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2023 Cat Sheet
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
